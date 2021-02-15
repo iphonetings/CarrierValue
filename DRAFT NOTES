@@ -1,0 +1,29 @@
+Plans:
+
+Optus 550
+Optus 800
+Optus Med
+
+Voda Lite
+Voda Lite+
+Voda Super
+
+Telstra Sm (NO 5G)
+Telstra Med
+
+Format & Example:
+
+PlanName;OutrightDiscount;MonthlyCost;PlanData
+Optus550,550,65,80
+TelstraS,0,55,40
+
+POST from Shortcut:
+DeviceCost
+CurrentPlan
+CurrentData
+
+Server:
+
+Regex for values separated by comma
+
+PlanName - (DeviceCost-OutrightDiscount)+(MonthlyCost*24) over 24mo with (PlanData-CurrentData) extra GB.
